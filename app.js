@@ -85,8 +85,9 @@ const sessionOption = {
 
 // Root route - basic test route
 app.get("/", (req, res) => {
-    res.send("hello world, I am root");                           
+    res.redirect("/listings");
 });
+
 
 app.use(session(sessionOption));
 app.use(flash());
